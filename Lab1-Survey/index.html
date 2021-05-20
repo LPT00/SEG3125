@@ -2,20 +2,36 @@
 <html lang="en-Us">
 
 <head>
-    <title> WealthSimple Survey </title>
+    <title> Wealthsimple Survey </title>
     <link rel="stylesheet" href="index-css.css">
-        
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <header> 
     <h1 id="Survey-Title" class="centered"> Wealthsimple UI Survey</h1>
-
-    <p id="Survey-Welcome" class="centered"> Please complete this survey about your experience with the WealthSimple website</p>
+    <img src="Pictures/WS-UI.png" alt="Wealthsimple" id="Picture">
+    <p id="Survey-Welcome" class="centered"> Please complete this survey regarding your experience at 
+        <a href ="https://www.wealthsimple.com/en-ca/" id="Link"> Wealthsimple.com</a></p>
 </header>
 
 <body>
-    <form id="survey">
-                
-    </form>
+    <div class="survey">
+        <form id="/action_page.php">
+            <div class="question">
+                <div class="question-label">
+                    <label for="fq">This is the first question</label>
+                </div>
+                <div class="question-options">
+                    <input type="text" id="fq" name="first name" placeholder="Type 'Hello'...">
+                </div>
+            </div>  
+
+            <div class="question">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    
 </body>
 </html>
