@@ -4,15 +4,13 @@
 <head>
     <title> Wealthsimple Survey </title>
     <link rel="stylesheet" href="index-css.css">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <header> 
     <h1 id="Survey-Title" class="centered"> Wealthsimple UI Survey</h1>
-    <img src="Pictures/WS-UI.png" alt="Wealthsimple" id="Picture">
+    <img src="Pictures/WS-UI.png" alt="Wealthsimple" id="Picture" >
     <p id="Survey-Welcome" class="centered"> Please complete this short survey regarding your experience at 
-        <a href ="https://www.wealthsimple.com/en-ca/" id="Link"> Wealthsimple.com</a> </p>
+        <a href ="https://www.wealthsimple.com/en-ca/" id="Link"> Wealthsimple.com</a></p>
 </header>
 
 <body>
@@ -20,10 +18,10 @@
         <form id="/action_page.php">
             <div class="question">
                 <div class="question-label">
-                    <label for="fq">First Name</label>
+                    <label>First Name</label>
                 </div>
-                <div class="question-options">
-                    <input type="text" id="fn" name="first name" placeholder="Please enter your first name...">
+                <div class="question-fill">
+                    <input type="text" name="first name" placeholder="Please enter your first name...">
                 </div>
             </div>  
 
@@ -31,20 +29,96 @@
 
             <div class="question">
                 <div class="question-label">
-                    <label for="fq">Last Name</label>
+                    <label>Last Name</label>
                 </div>
-                <div class="question-options">
-                    <input type="text" id="ln" name="last name" placeholder="Please enter your last name...">
+                <div class="question-fill">
+                    <input type="text" name="last name" placeholder="Please enter your last name...">
                 </div>
             </div> 
 
             <br>
 
             <div class="question">
+                <div class="question-label">
+                    <label>Age</label>
+                </div>
+                <div class="question-fill">
+                    <input type="number" name="age" placeholder="Please enter your age..."
+                    min=1 max=100>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="question">
+                <div class="question-label">
+                    <label>Options</label>
+                </div>
+                <div class="question-dropdown">
+                    <select name="select" id="dropdown">
+                        <option disabled selected value>Select...</option>
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                    </select>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="question">
+                <div class="question-label">
+                    <label>Would you use their services?</label>
+                </div>
+                <div class="question-radio">
+                    <label>
+                        <input type="radio" name="dot" checked>Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="dot">No
+                    </label>
+                    <label>
+                        <input type="radio" name="dot">Maybe
+                    </label>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="question">
+                <div class="question-label">
+                    <label>options (check all that apply)</label>
+                </div>
+                <div class="question-checkbox">
+                    <label>
+                        <input type="checkbox" name="check">Check
+                    </label>
+                    <label>
+                        <input type="checkbox" name="check">Some
+                    </label>
+                    <label>
+                        <input type="checkbox" name="check">Options
+                    </label>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="question">
+                <div class="question-label">
+                    <label>Any comments/suggestions for the Wealthsimple Website?</label>
+                </div>
+                <div class="question-comments">
+                    <input type="text" name="comments" placeholder="Enter comments here...">
+                </div>
+            </div>
+
+            <br>
+
+            <div class="question">
                 <input type="submit" value="Submit">
             </div>
+
         </form>
     </div>
-    
 </body>
 </html>
