@@ -16,30 +16,31 @@ body, html{
 
 #Survey-Title{
     font-family: "Caslon+Graphique";
-    color: goldenrod;
-    text-shadow:  2px 2px 3px black;
+    color: rgb(75, 75, 75);
+    text-shadow: 1px 1px 2px rgb(90, 90, 90);
     font-weight: bold;
     font-size: 350%;
+    font-stretch: expanded;
 }
 
 #Picture{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: 4px solid rgb(180, 180, 180);
+    border: 2.5px solid rgb(168, 168, 168);
     width: 350px;
 }
 
 #Survey-Welcome{
     font-family: "Caslon+Graphique";
     color: rgb(60, 60, 60);
-    text-shadow: 1px 1px 1px goldenrod;
+    text-shadow: 1px 1px 1px grey;
     font-weight: bolder;
     font-size: 170%;
 }
 
 #Link{
-    color: rgb(0, 85, 165);
+    color: rgb(3, 75, 143);
 }
 
 .centered{
@@ -52,8 +53,8 @@ body, html{
 
 .survey{
     padding: 30px 60px 30px 60px;
-    background-color: grey;
-    opacity: 0.9;
+    background-color: rgb(90, 90, 90);
+    opacity: 0.90;
     border-radius: 6px;
     margin: 0.5rem auto 0 auto;
 }
@@ -133,9 +134,11 @@ input[type=number], select, textarea{
 }
  
 input[type=submit]{
+    font-family: "Caslon+Graphique";
     background-color: goldenrod;
-    color: whitesmoke;
+    color: black;
     font-size: 150%;
+    font-weight: bold;
     width: 30%;
     margin: auto;
     display: block;
