@@ -44,7 +44,7 @@
                 </div>
                 <div class="question-fill">
                     <input type="number" name="age" placeholder="Please enter your age..."
-                    min=1 max=100>
+                    min=1 max=120>
                 </div>
             </div>
 
@@ -52,13 +52,17 @@
 
             <div class="question">
                 <div class="question-label">
-                    <label>Options</label>
+                    <label>Have you traded/invested before? If so, please specify your prefered service.</label>
                 </div>
                 <div class="question-dropdown">
                     <select name="select" id="dropdown">
                         <option disabled selected value>Select...</option>
-                        <option value="option1">Option 1</option>
-                        <option value="option2">Option 2</option>
+                        <option value="option1">Wealthsimple</option>
+                        <option value="option2">Qeustrade</option>
+                        <option value="option3">PocketSmith</option>
+                        <option value="option4">Robinhood</option>
+                        <option value="option5">Stockpile</option>
+                        <option value="option6">Other</option>
                     </select>
                 </div>
             </div>
@@ -67,17 +71,27 @@
 
             <div class="question">
                 <div class="question-label">
-                    <label>Would you use their services?</label>
+                    <label>How is the Wealthsimple website?</label>
                 </div>
                 <div class="question-radio">
                     <label>
-                        <input type="radio" name="dot" checked>Yes
+                        <input type="radio" name="dot">Very good 
                     </label>
+                    <br>
                     <label>
-                        <input type="radio" name="dot">No
+                        <input type="radio" name="dot">Good
                     </label>
+                    <br>
                     <label>
-                        <input type="radio" name="dot">Maybe
+                        <input type="radio" name="dot">Acceptable
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="dot">Bad
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="dot">Very bad
                     </label>
                 </div>
             </div>
@@ -86,17 +100,52 @@
 
             <div class="question">
                 <div class="question-label">
-                    <label>options (check all that apply)</label>
+                    <label>Would you use any of Wealthsimple's products?</label>
+                </div>
+                <div class="question-radio">
+                    <label>
+                        <input type="radio" name="dot" checked>Yes 
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="dot">No 
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="dot">Maybe 
+                    </label>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="question">
+                <div class="question-label">
+                    <label>Which Wealthsimple products are you interested in?</label>
                 </div>
                 <div class="question-checkbox">
                     <label>
-                        <input type="checkbox" name="check">Check
+                        <input type="checkbox" name="check">Invest  
                     </label>
+                    <br>
                     <label>
-                        <input type="checkbox" name="check">Some
+                        <input type="checkbox" name="check">Cash  
                     </label>
+                    <br>
                     <label>
-                        <input type="checkbox" name="check">Options
+                        <input type="checkbox" name="check">Trade  
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="check">Crypto  
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="check">Tax  
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="check">None  
                     </label>
                 </div>
             </div>
@@ -105,7 +154,7 @@
 
             <div class="question">
                 <div class="question-label">
-                    <label>Any comments/suggestions for the Wealthsimple Website?</label>
+                    <label>Do you have any comments/suggestions for the Wealthsimple Website?</label>
                 </div>
                 <div class="question-comments">
                     <input type="text" name="comments" placeholder="Enter comments here...">

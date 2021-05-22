@@ -53,7 +53,7 @@ body, html{
 
 .survey{
     padding: 30px 60px 30px 60px;
-    background-color: rgb(90, 90, 90);
+    background-color: rgb(128, 128, 128);
     opacity: 0.90;
     border-radius: 6px;
     margin: 0.5rem auto 0 auto;
@@ -72,7 +72,7 @@ body, html{
 .question-radio{
     font-family: "Caslon+Graphique";
     float: left;
-    font-size: 120%;
+    font-size: 130%;
     width: 100%;
     margin-top: 5px;
     color: black;
@@ -82,12 +82,11 @@ body, html{
 .question-checkbox{
     font-family: "Caslon+Graphique";
     float: left;
-    font-size: 120%;
+    font-size: 130%;
     width: 100%;
     margin-top: 5px;
     color: black;
     font-weight: bold;
-    vertical-align: middle;
 }
 
 .question-fill{
@@ -132,7 +131,20 @@ input[type=number], select, textarea{
     resize: vertical;
     font-family: "Caslon+Graphique";
 }
+
+input[type=radio]{
+    width: 15px;
+    height: 15px;
+    vertical-align: top;
+}
  
+input[type=checkbox]{
+    border-radius: 4px;
+    width: 15px;
+    height: 15px;
+    vertical-align: top;
+}
+
 input[type=submit]{
     font-family: "Caslon+Graphique";
     background-color: goldenrod;
