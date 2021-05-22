@@ -95,6 +95,12 @@ body, html{
     margin-top: 5px;
 }
 
+.question-comments{
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+}
+
 .question:after{
     content: "";
     display: table;
@@ -170,4 +176,11 @@ input[type=submit]:hover{
         max-width: 800px;
     }
 
+}
+
+#Liam-Signature{
+    font-style: italic;
+    color: rgb(70, 70, 70);
+
+    font-weight: bold;
 }
