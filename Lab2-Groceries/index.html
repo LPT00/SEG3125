@@ -2,8 +2,7 @@
 <html>
 <head>
   <!-- This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp -->
-	<link href="styles/style.css" rel="stylesheet" type="text/css">
-    <title>LPT00's Grocery Site</title>
+  <title>LPT00's Grocery Site</title>
 	<link href="Styles/style.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -24,12 +23,10 @@
   <div id="Client" class="tabcontent">
     <h3 id = "Client-Info">Client Information</h3>
     <!-- <p>We would like to know if you have any dietary restrictions</p> -->
-    <div class="question-label">
-      <label>Please select any dietary restrictions that apply to you:</label>
-    </div>
+    <label>Please select the dietary restrictions that apply to you:</label>
     <div id= "dietSelect">
         <label>
-            <input id = "Lactose" type="checkbox" name = "Lactose" value = "Lactose" onchange="populateListProductChoices()">Lactose Intolerant
+            <input id = "Lactose" type="checkbox" name = "Lactose" value = "Lactose" onchange="populateListProductChoices()">Lactose Intolerance
         </label>
         <br>
         <label>
@@ -37,21 +34,15 @@
         </label>
         <br>
         <label>
-            <input id = "Organic" type = "checkbox" name = "Organic" value = "Organic" onchange="populateListProductChoices()">Organic
+            <input id = "Organic" type = "checkbox" name = "Organic" value = "Organic" onchange="populateListProductChoices()">Organic Preferred
+        </label>
+        <br>
+        <label>
+          <input id = "None" type = "checkbox" name = "None" value = "None" onchange="populateListProductChoices()">None
         </label>
         <br>
     </div>
   </div>
-  <!-- </div>
-
-    <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-    <option value=""></option>
-    <option value="Vegetarian">Vegetarian</option>
-      <option value="GlutenFree">GlutenFree</option>
-      <option value="None">None</option>
-    </select>
-
-  </div> -->
 
   <div id="Products" class="tabcontent">
     <h3>Available products that follow dietary restrictions</h3>

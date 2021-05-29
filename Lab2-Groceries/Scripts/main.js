@@ -31,14 +31,15 @@ function populateListProductChoices() {
     var s1 = document.getElementById("Lactose");
 	var s2 = document.getElementById("Nut");
 	var s3 = document.getElementById("Organic");
+	var s4 = document.getElementById("None");
 
-    var product = document.getElementById('displayProduct');
+    var sp = document.getElementById('displayProduct');
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
-    product.innerHTML = "";
+    sp.innerHTML = "";
 		
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products, s1.checked, s2.checked, s3.checked);
+    var optionArray = restrictListProducts(products, s1.checked, s2.checked, s3.checked, s4.checked);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
@@ -52,16 +53,16 @@ function populateListProductChoices() {
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.value = productName;
-		product.appendChild(checkbox);
+		sp.appendChild(checkbox);
 		
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
 		label.htmlFor = productName;
 		label.appendChild(document.createTextNode(productName));
-		product.appendChild(label);
+		sp.appendChild(label);
 		
 		// create a breakline node and add in HTML DOM
-		product.appendChild(document.createElement("br"));    
+		sp.appendChild(document.createElement("br"));    
 	}
 }
 	
@@ -91,6 +92,6 @@ function selectedItems(){
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
+	c.appendChild(document.createTextNode("Total Price is: $" + getTotalPrice(chosenProducts)));
 		
 }
