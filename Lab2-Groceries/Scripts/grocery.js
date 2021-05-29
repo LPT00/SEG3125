@@ -42,7 +42,7 @@ function restrictListProducts(prods, lac, nut, org) {
 	let product_names = [];
 	prods.sort(function(a,b){return a.price - b.price})
 	for (let i=0; i<prods.length; i+=1) {
-		if (!(lac && !prods[i].Lactose) && !(nut && !prods[i].Nut) && !(lac && !prods[i].Organic)){
+		if (!(lac && !prods[i].Lactose) && !(nut && !prods[i].Nut) && !(org && !prods[i].Organic)){
 			product_names.push(prods[i].name + "Cost: $" + prods[i].price);
 		}
 	}

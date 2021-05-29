@@ -27,7 +27,7 @@ function openInfo(evt, tabName) {
 // it makes each product name as the label for the checkbos
 
 function populateListProductChoices() {
-	
+
     var s1 = document.getElementById("Lactose");
 	var s2 = document.getElementById("Nut");
 	var s3 = document.getElementById("Organic");
