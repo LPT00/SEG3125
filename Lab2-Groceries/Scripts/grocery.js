@@ -4,22 +4,33 @@
 var products = [
 	{
 		name: "brocoli",
-		vegetarian: true,
-		glutenFree: true,
+		Lactose: true,
+		Nut: true,
+		Organic: true,
 		price: 1.99
 	},
 	{
 		name: "bread",
-		vegetarian: true,
-		glutenFree: false,
+		Lactose: true,
+		Nut: false,
+		Organic: false,
 		price: 2.35
 	},
 	{
 		name: "salmon",
-		vegetarian: false,
-		glutenFree: true,
+		Lactose: true,
+		Nut: true,
+		Organic: false,
 		price: 10.00
+	},
+	{
+		name: "Chocolate Cake",
+		Lactose: false,
+		Nut: false,
+		Organic: false,
+		price: 20.00
 	}
+
 ];
 	
 
@@ -27,17 +38,12 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods, restriction) {
+function restrictListProducts(prods, lac, nut, org) {
 	let product_names = [];
+	prods.sort(function(a,b){return a.price - b.price})
 	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push(prods[i].name);
-		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i].name);
-		}
-		else if (restriction == "None"){
-			product_names.push(prods[i].name);
+		if (!(lac && !prods[i].Lactose) && !(nut && !prods[i].Nut) && !(lac && !prods[i].Organic)){
+			product_names.push(prods[i].name + "Cost: $" + prods[i].price);
 		}
 	}
 	return product_names;
@@ -47,7 +53,7 @@ function restrictListProducts(prods, restriction) {
 function getTotalPrice(chosenProducts) {
 	totalPrice = 0;
 	for (let i=0; i<products.length; i+=1) {
-		if (chosenProducts.indexOf(products[i].name) > -1){
+		if (chosenProducts.contains(products[i])){
 			totalPrice += products[i].price;
 		}
 	}
