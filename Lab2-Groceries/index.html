@@ -6,25 +6,25 @@
 	<link href="Styles/style.css" rel="stylesheet" type="text/css">
 </head>
 
-<header>
-    <h1 id="Survey-Title" class="centered">uOttawa Groceries</h1>
-</header>
-
 <body>
+
+  <h1 id="Survey-Title" class="centered">uOttawa Groceries</h1>
 
   <!-- Tab links, each one with an onclick event associated with it -->
   <div class="tab" class = "center">
-    <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+    <button class="tablinks" onclick="openInfo(event, 'Client')" id = "openByDefault">Client</button>
     <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
     <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
   </div>
 
   <!-- Tab content -->
   <div id="Client" class="tabcontent">
-    <h3 id = "Client-Info">Client Information</h3>
+    <h3 id = "Client-Info" class = "centered">Client Information</h3>
     <!-- <p>We would like to know if you have any dietary restrictions</p> -->
     <label class = "Selections">Please select the dietary restrictions that apply to you:</label>
-    <div id= "dietSelect">
+    <br>
+    <br>
+    <div id= "dietSelect" class = "Diet">
         <label>
             <input id = "Lactose" type="checkbox" name = "Lactose" value = "Lactose" onchange="populateListProductChoices()">Lactose Intolerance
         </label>
@@ -46,10 +46,13 @@
   </div>
 
   <div id="Products" class="tabcontent">
-    <h3>Available products that follow dietary restrictions</h3>
+    <h3 class = "centered">Available Products</h3>
     <label class = "Selections"> Choose items to buy: </label>
-    <div id="displayProduct"></div>
-    <button id="addCart" type="button" class="block" onclick="selectedItems()">
+    <br>
+    <br>
+    <div id="displayProduct" class = "Diet"></div>
+    <br>
+    <button id="addCart" type="button" class="block Add" onclick="selectedItems()">
       Add selected items to cart.
     </button>
     <br>
@@ -57,9 +60,10 @@
   </div>
 
   <div id="Cart" class="tabcontent">
-    <h3>Cart</h3>
+    <h3 class = "centered">Cart</h3>
     <label class = "Selections">Here is your cart.</label>
-    <div id="displayCart"></div>
+    <br>
+    <div id="displayCart" class = "Cart"></div>
     <br>
   </div>
 
@@ -71,7 +75,7 @@
     <p id="Liam-Signature" class="centered">
       Site created by: Tiger Woods
     </p>
-</footer>
+  </footer>
 
 
 </body>

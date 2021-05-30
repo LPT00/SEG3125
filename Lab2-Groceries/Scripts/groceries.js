@@ -4,84 +4,84 @@
 var products = [
 
 	{
-		name: "Bananas - $0.99",
+		name: "Bananas - $1.00",
 		Lactose: true,
 		Nut: true,
 		Organic: false,
 		None: true,
-		price: 0.99
+		price: 1.00
 	},
 	{
-		name: "Onions - $1.99",
+		name: "Onions - $2.00",
 		Lactose: true,
 		Nut: true,
 		Organic: true,
 		None: true,
-		price: 1.99
+		price: 2.00
 	},	
 	{
-		name: "Bread - $2.49",
+		name: "Bread - $2.50",
 		Lactose: true,
 		Nut: false,
 		Organic: false,
 		None: true,
-		price: 2.49
+		price: 2.50
 	},
 	{
-		name: "Spinack- $2.99",
+		name: "Spinach- $3.00",
 		Lactose: true,
 		Nut: true,
 		Organic: true,
 		None: true,
-		price: 2.99
+		price: 3.00
 	},
 	{
-		name: "Eggs - $3.49",
+		name: "Eggs - $3.50",
 		Lactose: true,
 		Nut: true,
 		Organic: false,
 		None: true,
-		price: 3.49
+		price: 3.50
 	},
 	{
-		name: "Almond Milk - $3.99",
+		name: "Almond Milk - $4.00",
 		Lactose: false,
 		Nut: false,
 		Organic: true,
 		None: true,
-		price: 3.99
+		price: 4.00
 	},
 	{
-		name: "Dragon Fruit - $5.49",
+		name: "Dragon Fruit - $5.50",
 		Lactose: true,
 		Nut: true,
 		Organic: true,
 		None: true,
-		price: 5.49
+		price: 5.50
 	},
 	{
-		name: "Tofu - $5.99",
+		name: "Tofu - $6.00",
 		Lactose: true,
 		Nut: true,
 		Organic: false,
 		None: true,
-		price: 5.99
+		price: 6.00
 	},
 	{
-		name: "Salmon - $11.99",
+		name: "Salmon - $12.00",
 		Lactose: true,
 		Nut: true,
 		Organic: false,
 		None: true,
-		price: 11.99
+		price: 12.00
 	},
 	{
-		name: "Chocolate Cake - $19.99",
+		name: "Chocolate Cake - $20.00",
 		Lactose: false,
 		Nut: true,
 		Organic: false,
 		None: true,
-		price: 19.99
+		price: 20.00
 	}
 
 ];

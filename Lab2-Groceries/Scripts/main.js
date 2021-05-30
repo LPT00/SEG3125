@@ -1,5 +1,6 @@
 // This function is called when any of the tab is clicked
 // It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
+document.getElementById("openByDefault").click();
 
 function openInfo(evt, tabName) {
 
@@ -96,10 +97,10 @@ function selectedItems(){
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Sub-Total: $" + getTotalPrice(chosenProducts)));
+	c.appendChild(document.createTextNode("Sub-Total: $" + Math.round(getTotalPrice(chosenProducts)*100) / 100));
 	c.appendChild(document.createElement("br"));
 	c.appendChild(document.createTextNode("Tax (13%): $" + Math.round((getTotalPrice(chosenProducts)*0.13)*100) / 100));
 	c.appendChild(document.createElement("br"));
-	c.appendChild(document.createTextNode("Total: $" + Math.round((getTotalPrice(chosenProducts) + getTotalPrice(chosenProducts)*0.13)*100) / 100));
+	c.appendChild(document.createTextNode("TOTAL: $" + Math.round((getTotalPrice(chosenProducts) + getTotalPrice(chosenProducts)*0.13)*100) / 100));
 
 }
