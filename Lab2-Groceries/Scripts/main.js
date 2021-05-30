@@ -103,6 +103,7 @@ function selectedItems(){
 	c.appendChild(document.createElement("br"));
 	c.appendChild(document.createTextNode("Tax (13%): $" + Math.round((getTotalPrice(chosenProducts)*0.13)*100) / 100));
 	c.appendChild(document.createElement("br"));
+	c.appendChild(document.createElement("br"));
 	c.appendChild(document.createTextNode("TOTAL: $" + Math.round((getTotalPrice(chosenProducts) + getTotalPrice(chosenProducts)*0.13)*100) / 100));
 
 }
