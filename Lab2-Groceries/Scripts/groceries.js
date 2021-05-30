@@ -2,37 +2,86 @@
 // A set of ingredients should be added to products		 
 
 var products = [
+
 	{
-		name: "brocoli - $1.99",
+		name: "Bananas - $0.99",
+		Lactose: true,
+		Nut: true,
+		Organic: false,
+		None: true,
+		price: 0.99
+	},
+	{
+		name: "Onions - $1.99",
 		Lactose: true,
 		Nut: true,
 		Organic: true,
 		None: true,
 		price: 1.99
-	},
+	},	
 	{
-		name: "bread - $2.35",
+		name: "Bread - $2.49",
 		Lactose: true,
 		Nut: false,
 		Organic: false,
 		None: true,
-		price: 2.35
+		price: 2.49
 	},
 	{
-		name: "salmon - $10.00",
+		name: "Spinack- $2.99",
+		Lactose: true,
+		Nut: true,
+		Organic: true,
+		None: true,
+		price: 2.99
+	},
+	{
+		name: "Eggs - $3.49",
 		Lactose: true,
 		Nut: true,
 		Organic: false,
 		None: true,
-		price: 10.00
+		price: 3.49
 	},
 	{
-		name: "Chocolate Cake - $20.00",
+		name: "Almond Milk - $3.99",
 		Lactose: false,
 		Nut: false,
+		Organic: true,
+		None: true,
+		price: 3.99
+	},
+	{
+		name: "Dragon Fruit - $5.49",
+		Lactose: true,
+		Nut: true,
+		Organic: true,
+		None: true,
+		price: 5.49
+	},
+	{
+		name: "Tofu - $5.99",
+		Lactose: true,
+		Nut: true,
 		Organic: false,
 		None: true,
-		price: 20.00
+		price: 5.99
+	},
+	{
+		name: "Salmon - $11.99",
+		Lactose: true,
+		Nut: true,
+		Organic: false,
+		None: true,
+		price: 11.99
+	},
+	{
+		name: "Chocolate Cake - $19.99",
+		Lactose: false,
+		Nut: true,
+		Organic: false,
+		None: true,
+		price: 19.99
 	}
 
 ];

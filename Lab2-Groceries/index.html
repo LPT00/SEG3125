@@ -7,13 +7,13 @@
 </head>
 
 <header>
-    <h1 id="Survey-Title" class="centered"> uOttawa Grocery Site</h1>
+    <h1 id="Survey-Title" class="centered">uOttawa Groceries</h1>
 </header>
 
 <body>
 
   <!-- Tab links, each one with an onclick event associated with it -->
-  <div class="tab">
+  <div class="tab" class = "center">
     <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
     <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
     <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
@@ -23,7 +23,7 @@
   <div id="Client" class="tabcontent">
     <h3 id = "Client-Info">Client Information</h3>
     <!-- <p>We would like to know if you have any dietary restrictions</p> -->
-    <label>Please select the dietary restrictions that apply to you:</label>
+    <label class = "Selections">Please select the dietary restrictions that apply to you:</label>
     <div id= "dietSelect">
         <label>
             <input id = "Lactose" type="checkbox" name = "Lactose" value = "Lactose" onchange="populateListProductChoices()">Lactose Intolerance
@@ -42,21 +42,25 @@
         </label>
         <br>
     </div>
+    <br>
   </div>
 
   <div id="Products" class="tabcontent">
     <h3>Available products that follow dietary restrictions</h3>
-    Choose items to buy:
+    <label class = "Selections"> Choose items to buy: </label>
     <div id="displayProduct"></div>
     <button id="addCart" type="button" class="block" onclick="selectedItems()">
       Add selected items to cart.
     </button>
+    <br>
+    <br>
   </div>
 
   <div id="Cart" class="tabcontent">
     <h3>Cart</h3>
-    <p>Here is your cart.</p>
+    <label class = "Selections">Here is your cart.</label>
     <div id="displayCart"></div>
+    <br>
   </div>
 
 
@@ -65,7 +69,7 @@
 
   <footer>
     <p id="Liam-Signature" class="centered">
-      Survey created by: Liam Prieditis
+      Site created by: Tiger Woods
     </p>
 </footer>
 

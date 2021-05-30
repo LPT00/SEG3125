@@ -33,7 +33,7 @@ function populateListProductChoices() {
 	var s3 = document.getElementById("Organic");
 	var s4 = document.getElementById("None");
 
-    var sp = document.getElementById('displayProduct');
+    var sp = document.getElementById("displayProduct");
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     sp.innerHTML = "";
@@ -89,9 +89,17 @@ function selectedItems(){
 			chosenProducts.push(ele[i].value);
 		}
 	}
+	// var subtot = document.createTextNode("Sub-Total: $" + getTotalPrice(chosenProducts));
+	// var tax = document.createTextNode("Tax (13%): $" + getTotalPrice(chosenProducts)*0.13);
+	// var tot = document.createTextNode("Total: $" + Math.Round((subtot + tax)*100)/100);
+	// var br = document.createElement("br");
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is: $" + getTotalPrice(chosenProducts)));
-		
+	c.appendChild(document.createTextNode("Sub-Total: $" + getTotalPrice(chosenProducts)));
+	c.appendChild(document.createElement("br"));
+	c.appendChild(document.createTextNode("Tax (13%): $" + Math.round((getTotalPrice(chosenProducts)*0.13)*100) / 100));
+	c.appendChild(document.createElement("br"));
+	c.appendChild(document.createTextNode("Total: $" + Math.round((getTotalPrice(chosenProducts) + getTotalPrice(chosenProducts)*0.13)*100) / 100));
+
 }
