@@ -1,7 +1,9 @@
 // This function is called when any of the tab is clicked
 // It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
 document.getElementById("openByDefault").click();
+
 populateListProductChoices();
+
 function openInfo(evt, tabName) {
 
 	selectedItems();
@@ -83,7 +85,7 @@ function selectedItems(){
 	
 	// build list of selected item
 	var para = document.createElement("P");
-	para.innerHTML = "You selected : ";
+	para.innerHTML = "You Selected: ";
 	para.appendChild(document.createElement("br"));
 	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
@@ -101,7 +103,7 @@ function selectedItems(){
 	c.appendChild(para);
 	c.appendChild(document.createTextNode("Sub-Total: $" + Math.round(getTotalPrice(chosenProducts)*100) / 100));
 	c.appendChild(document.createElement("br"));
-	c.appendChild(document.createTextNode("Tax (13%): $" + Math.round((getTotalPrice(chosenProducts)*0.13)*100) / 100));
+	c.appendChild(document.createTextNode("HST (13%): $" + Math.round((getTotalPrice(chosenProducts)*0.13)*100) / 100));
 	c.appendChild(document.createElement("br"));
 	c.appendChild(document.createElement("br"));
 	c.appendChild(document.createTextNode("TOTAL: $" + Math.round((getTotalPrice(chosenProducts) + getTotalPrice(chosenProducts)*0.13)*100) / 100));

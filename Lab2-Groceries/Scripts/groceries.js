@@ -12,17 +12,33 @@ var products = [
 		price: 1.00
 	},
 	{
-		name: "Onions - $2.00",
+		name: "Organic Bananas - $1.25",
 		Lactose: true,
 		Nut: true,
 		Organic: true,
 		None: true,
+		price: 1.25
+	},
+	{
+		name: "Onions - $2.00",
+		Lactose: true,
+		Nut: true,
+		Organic: false,
+		None: true,
 		price: 2.00
+	},
+	{
+		name: "Organic Onions - $2.25",
+		Lactose: true,
+		Nut: true,
+		Organic: true,
+		None: true,
+		price: 2.25
 	},	
 	{
 		name: "Bread - $2.50",
 		Lactose: true,
-		Nut: false,
+		Nut: true,
 		Organic: false,
 		None: true,
 		price: 2.50
@@ -31,9 +47,17 @@ var products = [
 		name: "Spinach- $3.00",
 		Lactose: true,
 		Nut: true,
-		Organic: true,
+		Organic: false,
 		None: true,
 		price: 3.00
+	},
+	{
+		name: "Organic Spinach- $3.25",
+		Lactose: true,
+		Nut: true,
+		Organic: true,
+		None: true,
+		price: 3.25
 	},
 	{
 		name: "Eggs - $3.50",
@@ -44,26 +68,42 @@ var products = [
 		price: 3.50
 	},
 	{
-		name: "Almond Milk - $4.00",
+		name: "Milk - $3.75",
 		Lactose: false,
+		Nut: true,
+		Organic: false,
+		None: true,
+		price: 3.75
+	},
+	{
+		name: "Almond Milk - $4.00",
+		Lactose: true,
 		Nut: false,
-		Organic: true,
+		Organic: false,
 		None: true,
 		price: 4.00
+	},
+	{
+		name: "Organic Oat Milk - $4.50",
+		Lactose: true,
+		Nut: true,
+		Organic: true,
+		None: true,
+		price: 4.50
 	},
 	{
 		name: "Dragon Fruit - $5.50",
 		Lactose: true,
 		Nut: true,
-		Organic: true,
+		Organic: false,
 		None: true,
 		price: 5.50
 	},
 	{
-		name: "Tofu - $6.00",
+		name: "Organic Tofu - $6.00",
 		Lactose: true,
 		Nut: true,
-		Organic: false,
+		Organic: true,
 		None: true,
 		price: 6.00
 	},
@@ -74,6 +114,14 @@ var products = [
 		Organic: false,
 		None: true,
 		price: 12.00
+	},
+	{
+		name: "Organic Raisin Walnut Cookies - $15.00",
+		Lactose: false,
+		Nut: false,
+		Organic: true,
+		None: true,
+		price: 15.00
 	},
 	{
 		name: "Chocolate Cake - $20.00",
