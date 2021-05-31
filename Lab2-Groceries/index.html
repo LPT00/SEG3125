@@ -43,6 +43,10 @@
         <br>
     </div>
     <br>
+    <button id="goToProducts" type="button" class="Go" onclick="openInfo(event, 'Products')">
+      Go to Products
+    </button>
+    <br>
   </div>
 
   <div id="Products" class="tabcontent">
@@ -52,10 +56,17 @@
     <br>
     <div id="displayProduct" class = "Diet"></div>
     <br>
-    <button id="addCart" type="button" class="block Add" onclick="selectedItems()">
-      Add selected items to cart.
+    <button id="addCart" type="button" class="Add" onclick="selectedItems()">
+      Add selected items to cart
     </button>
     <br>
+    <button id="goToCart" type="button" class="Go" onclick="openInfo(event, 'Cart')">
+      Go to Cart
+    </button>
+    <br>
+    <button id="backToClient" type="button" class="Back" onclick="openInfo(event, 'Client')">
+      Back to Client
+    </button>
     <br>
   </div>
 
@@ -64,6 +75,10 @@
     <label class = "Selections">Here is your cart.</label>
     <br>
     <div id="displayCart" class = "Cart"></div>
+    <br>
+    <button id="backToClient" type="button" class="Back" onclick="openInfo(event, 'Products')">
+      Back to Products
+    </button>
     <br>
   </div>
 

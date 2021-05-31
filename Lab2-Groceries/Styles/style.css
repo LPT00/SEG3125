@@ -56,17 +56,49 @@ input[type=checkbox]{
 }
 
 .Add{
-  font-size: 120%;
+  font-size: 110%;
   font-weight: bold;
-  color: rgb(60, 60, 60)
+  color: rgb(44, 44, 44);
+  display: block;
+  width: 40%;
+  border-radius: 5px;
+  border: 2px solid yellowgreen;
+  background-color: yellowgreen;
+  padding: 5px 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.Go{
+  font-size: 110%;
+  font-weight: bold;
+  color: rgb(44, 44, 44);
+  display: block;
+  width: 25%;
+  border-radius: 5px;
+  border: 2px solid rgb(237, 170, 0);
+  background-color: rgb(237, 170, 0);
+  padding: 5px 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.Back{
+  font-size: 110%;
+  font-weight: bold;
+  color: rgb(44, 44, 44);
+  display: block;
+  width: 25%;
+  border-radius: 5px;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: rgb(200, 200, 200);
+  padding: 5px 5px;
+  cursor: pointer;
+  text-align: center;
 }
 
 .Cart{
   font-size: 130%;
-}
-
-input[type=button]{
-  
 }
 
 #Liam-Signature{

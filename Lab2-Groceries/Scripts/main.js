@@ -1,10 +1,10 @@
 // This function is called when any of the tab is clicked
 // It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
 document.getElementById("openByDefault").click();
-
 populateListProductChoices();
-
 function openInfo(evt, tabName) {
+
+	selectedItems();
 
 	// Get all elements with class="tabcontent" and hide them
 	tabcontent = document.getElementsByClassName("tabcontent");
