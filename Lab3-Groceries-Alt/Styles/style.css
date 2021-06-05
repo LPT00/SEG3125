@@ -1,0 +1,161 @@
+
+html{
+    background-color: rgb(116, 177, 66);
+    background-image: url("Pictures/fruits4.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body{
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media(min-width: 800px){
+    body{
+        max-width: 750px;
+    }
+  }
+  
+  #Survey-Title{
+    font-family: calibri;
+    font-weight: bold;
+    color: rgb(255, 230, 0);
+    text-shadow: 2.5px 2.5px 4px rgb(31, 30, 0);
+    font-weight: bold;
+    font-size: 450%;
+    font-stretch: expanded;
+  }
+  
+  .centered{
+    text-align: center;
+  }
+  
+  h3{
+    font-weight: bold;
+    font-size: 170%;
+  }
+  
+  .Selections{
+    font-size: 140%;
+    font-style: italic;
+    
+  }
+  
+  input[type=checkbox]{
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+    color: yellow;
+  }
+  
+  .Diet{
+    font-size: 130%;
+  }
+  
+  .Add{
+    font-size: 110%;
+    font-weight: bold;
+    color: rgb(44, 44, 44);
+    display: block;
+    width: 40%;
+    border-radius: 5px;
+    border: 2px solid yellowgreen;
+    background-color: yellowgreen;
+    padding: 5px 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .Go{
+    font-size: 110%;
+    font-weight: bold;
+    color: rgb(44, 44, 44);
+    display: block;
+    width: 25%;
+    border-radius: 5px;
+    border: 2px solid rgb(237, 170, 0);
+    background-color: rgb(237, 170, 0);
+    padding: 5px 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .Back{
+    font-size: 110%;
+    font-weight: bold;
+    color: rgb(44, 44, 44);
+    display: block;
+    width: 25%;
+    border-radius: 5px;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: rgb(200, 200, 200);
+    padding: 5px 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .Cart{
+    font-size: 130%;
+  }
+  
+  #Liam-Signature{
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 125%;
+    color: rgb(255, 230, 0);
+    text-shadow: 1px 1px 1px rgb(32, 34, 0);
+  }
+  
+  /*
+  Code from template
+  */
+  .tab{ 
+      text-align: center;
+      overflow: hidden;
+      background-color: rgb(218, 248, 193);
+      border-radius: 15px;
+      border: 1px solid rgb(103, 118, 91);
+  }
+    
+    /* Style the buttons that are used to open the tab content */
+  .tab button {
+      background-color:inherit;
+      font-family: Calibri;
+      font-weight: bold;
+      color: rgb(55, 55, 55);
+      font-size: 200%;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+  }
+    
+    /* Change background color of buttons on hover */
+  .tab button:hover {
+      background-color: rgb(176, 209, 149);
+  }
+    
+    /* Create an active/current tablink class */
+  .tab button.active {
+      background-color: rgb(122, 169, 84);
+  }
+    
+    /* Style the tab content */
+  .tabcontent {
+      background-color: rgb(218, 248, 193);
+      display: none;
+      padding: 6px 12px;
+      border-radius: 15px;
+      border-top: none;
+      color: rgb(72, 72, 72);
+      font-family: Calibri;
+      border-radius: 15px;
+      border: 1px solid rgb(103, 118, 91);
+  }
+  
+  
+  

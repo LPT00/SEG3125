@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp -->
+  <title>LPT00's Grocery Site</title>
+	<link href="Styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <h1 id="Survey-Title" class="centered">uOttawa Groceries</h1>
+
+  <!-- Tab links, each one with an onclick event associated with it -->
+  <div class="tab" class = "center">
+    <button class="tablinks" onclick="openInfo(event, 'Client')" id = "openByDefault">Client</button>
+    <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+    <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+  </div>
+
+  <!-- Tab content -->
+  <div id="Client" class="tabcontent">
+    <h3 id = "Client-Info" class = "centered">Client Information</h3>
+    <!-- <p>We would like to know if you have any dietary restrictions</p> -->
+    <label class = "Selections">Please select any dietary restrictions that apply to you:</label>
+    <br>
+    <br>
+    <div id= "dietSelect" class = "Diet">
+        <label>
+            <input id = "Lactose" type="checkbox" name = "Lactose" value = "Lactose" onchange="populateListProductChoices()">Lactose Intolerance
+        </label>
+        <br>
+        <label>
+            <input id = "Nut" type="checkbox" name="Nut" value = "Nut" onchange="populateListProductChoices()">Nut Allergy
+        </label>
+        <br>
+        <label>
+            <input id = "Organic" type = "checkbox" name = "Organic" value = "Organic" onchange="populateListProductChoices()">Organic Preferred
+        </label>
+        <br>
+        <label>
+          <input id = "None" type = "checkbox" name = "None" value = "None" checked = "true" onchange="populateListProductChoices()">None
+        </label>
+        <br>
+    </div>
+    <br>
+    <button id="goToProducts" type="button" class="Go" onclick="openInfo(event, 'Products')">
+      Go to Products
+    </button>
+    <br>
+  </div>
+
+  <div id="Products" class="tabcontent">
+    <h3 class = "centered">Available Products</h3>
+    <label class = "Selections"> Choose items to buy: </label>
+    <br>
+    <br>
+    <div id="displayProduct" class = "Diet"></div>
+    <br>
+    <button id="addCart" type="button" class="Add" onclick="selectedItems()">
+      Add selected items to cart
+    </button>
+    <br>
+    <button id="goToCart" type="button" class="Go" onclick="openInfo(event, 'Cart')">
+      Go to Cart
+    </button>
+    <br>
+    <button id="backToClient" type="button" class="Back" onclick="openInfo(event, 'Client')">
+      Back to Client
+    </button>
+    <br>
+  </div>
+
+  <div id="Cart" class="tabcontent">
+    <h3 class = "centered">Cart</h3>
+    <label class = "Selections">Here is your cart.</label>
+    <br>
+    <div id="displayCart" class = "Cart"></div>
+    <br>
+    <button id="backToClient" type="button" class="Back" onclick="openInfo(event, 'Products')">
+      Back to Products
+    </button>
+    <br>
+  </div>
+
+
+  <script src="Scripts/groceries.js"></script>
+  <script src="Scripts/main.js"></script>
+
+  <footer>
+    <p id="Liam-Signature" class="centered">
+      Site created by: Tiger Woods
+    </p>
+  </footer>
+
+
+</body>
+</html> 
