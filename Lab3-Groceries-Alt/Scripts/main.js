@@ -37,6 +37,7 @@ function populateListProductChoices() {
 	var s2 = document.getElementById("Nut");
 	var s3 = document.getElementById("Organic");
 	var s4 = document.getElementById("None");
+	var s5 = document.getElementById("Diabetic");
 
     var sp = document.getElementById("displayProduct");
 	
@@ -44,7 +45,8 @@ function populateListProductChoices() {
     sp.innerHTML = "";
 		
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products, s1.checked, s2.checked, s3.checked, s4.checked);
+    var optionArray = restrictListProducts(products, s1.checked, s2.checked, s3.checked, s4.checked, s5.checked);
+	var optionPics = restrictPictures(products, s1.checked, s2.checked, s3.checked, s4.checked, s5.checked);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
@@ -66,6 +68,13 @@ function populateListProductChoices() {
 		label.appendChild(document.createTextNode(productName));
 		sp.appendChild(label);
 		
+		//adding in the pictures
+		var pic = new Image();
+		pic.src = "Pictures/" + optionPics[i] + ".jpg";
+		sp.appendChild(document.createElement("br"));  
+		sp.appendChild(pic);
+		sp.appendChild(document.createElement("br"));
+
 		// create a breakline node and add in HTML DOM
 		sp.appendChild(document.createElement("br"));    
 	}
@@ -109,3 +118,14 @@ function selectedItems(){
 	c.appendChild(document.createTextNode("TOTAL: $" + Math.round((getTotalPrice(chosenProducts) + getTotalPrice(chosenProducts)*0.13)*100) / 100));
 
 }
+
+//new code below for the new navigator
+function openNav() {
+	document.getElementById("mySidenav").style.width = "300px";
+	document.getElementById("main").style.marginLeft = "300px";
+  }
+  
+  function closeNav() {
+	document.getElementById("mySidenav").style.width = "0";
+	document.getElementById("main").style.marginLeft= "0";
+  }
