@@ -12,6 +12,7 @@ This will help you get started with your code!
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="styles/styles.css" rel="stylesheet" type="text/css">
     <title>Module 4 Lab</title>
+    <script src = "main.js"></script> </script>
 </head>
 <body>
 <!--
@@ -26,14 +27,25 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     https://getbootstrap.com/docs/5.0/components/navbar/
     -->
 
-    <nav class="navbar bg-dark text-white p-3 my-3 ">
-        <h1><img src="images/company_logo.png" width="130" height="130"> Welcome to my Physiotherapy Clinic</h1>
+    <nav class="navbar p-3 my-3 " id = "title-background">
+        <h1 id = "title"><img id = "physio-image" src="images/Physio.jpg" width="180" height= "180"> PineTree Physiotherapy and Osteopathy Clinic</h1>
     </nav>
 
+    <!-- <h1> Important News!</h1> -->
+    <!-- Alerts are an easy way to grab the users attention, this page goes into more detail
+    https://getbootstrap.com/docs/5.0/components/alerts/
+    -->
+    <!-- <p>This indicated something important in the page</p> -->
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" id = "warning">
+        <strong>COVID-19 Update: </strong> Due to the ongoing pandemic, masks must be worn at ALL TIMES while in the clinic
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
     <div class=" p-3 my-3 border bg-light">
-        <h1 class=""> About us</h1>
-        <p class="p-4 my-3" style="font-size: 25px">We are a small clinic located in Smiths Falls Ontario</p>
-        <p style="font-size: 25px; padding-left: 1.5rem">We are dedicated to providing the <strong>best</strong> care to our customers</p>
+        <h1 class=""> About Us</h1>
+        <pre  class="p-4 my-3 about">We are a family owned professional healthy clinic located in Augusta, Georgia that 
+specializes in <strong>physiotherapy</strong> and <strong>osteopathy.</strong></pre>
+        <pre style="font-size: 25px; padding-left: 1.5rem" class = "about">We are commited to providing the <strong>best health services in Augusta.</strong></pre>
     </div>
     <!--
     Tables are one of many ways to organize information easily.
@@ -43,129 +55,208 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     <table class="table table-info table-hover">
         <thead>
             <tr>
-                <th scope="col"><h2>Service</h2></th>
+                <th scope="col"><h2>Services We Offer</h2></th>
                 <th scope="col"><h2>Description</h2></th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Placeholder 1</td>
-                <td>Placeholder 2</td>
+                <td class = "offer"> Physiotherapist Assessment </td>
+                <td> A 30 minutes health assessement, focused on identifyinig and combating physical limitations </td>
             </tr>
             <tr>
-                <td>Placeholder 1</td>
-                <td>Placeholder 2</td>
+                <td class = "offer"> Atheletic Therapist Assessment </td>
+                <td> A 30 minute health assessement for athletes, focused on identifying and combating limitations for performance in sports</td>
             </tr>
             <tr>
-                <td>Placeholder 1</td>
-                <td>Placeholder 2</td>
+                <td class = "offer"> Osteopath Assessment </td>
+                <td> A 60 minutes health assessement, focused on identifyinig identifying and combating targetted tissue areas </td>
+            </tr>    
+            <tr>
+                <td class = "offer"> General Massage </td>
+                <td> A 60 minute massage for either full body, or specified area based on client's preference </td>
+            </tr>
+            <tr> 
+                <td class = "offer"> Deep Tissue Massage </td>
+                <td> Athletes and people who do not regularly stretch can gain tightness in tissue below what our general massage covers.
+                    This massage will allow be a 60 minute massage that focuses on specific areas of deep tissue tightness.
+                </td>
             </tr>
         </tbody>
     </table>
-    <h1>Here is an alert!</h1>
-    <!-- Alerts are an easy way to grab the users attention, this page goes into more detail
-    https://getbootstrap.com/docs/5.0/components/alerts/
-    -->
-    <p>This indicated something important in the page</p>
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Yikes!</strong> Perhaps you left one of the fields empty for this to appear?
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+    <br>
+
+    <h1 class = "centered"> Meet your Physicians</h1>
+    <br>
+    <div class="row justify-content-around">
+        <div class="card" style="width: 18rem;">
+            <img src="images/Billy.jpg" class = "Physicians" width="250" height= "250"/>         
+            <div class="card-body">
+                <h4>Billy Bobby</h4>
+                <p class="card-text">Billy is an experienced Health Professional with 25 years of experience and an MD and Degree in Medical Physics</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="images/Samantha.jpg" class = "Physicians" width="250" height= "250"/>
+            <div class="card-body">
+                <h4>Samantha Tamanna</h4>
+                <p class="card-text">Samantha is an experienced Health Professional with 10 years of experience and a PhD in Physical Therapy</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="images/Jonathan.jpg" class = "Physicians" width="250" height= "250"/>
+            <div class="card-body">
+                <h4>Jonathan Bonovan</h4>
+                <p class="card-text">Jonathan is an experienced Health Professional with 8 years of experience and a Masters in Health Scieces</p>
+            </div>
+        </div>
     </div>
 
-    <h1>Button States</h1>
-    <!--
-    Buttons can be used for submitting forms, triggering events among many other things.
-    https://getbootstrap.com/docs/5.0/components/buttons/
-    -->
+    <br>
+    <br>
 
-    <button type="button" class="btn btn-warning">Primary Button</button>
-    <button type="button" class="btn btn-warning active">Active Button</button>
-    <button type="button" class="btn btn-warning" disabled>Disabled Button</button>
+    <!-- <button class="btn btn-primary center-div" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Button To Expand Options
+    </button>
 
-    <h1>Modal Example</h1>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <h4>Thank you for booking an appointment, we will get back to you shortly!</h4>
+        </div>
+    </div> -->
+
+    <button type="button" class="btn btn-primary center-div" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Book an Appointment
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+
+                <br>
+                <div class="modal-header center-div">
+                    <h1 id = "Book-appt"> Book an Appointment </h1>
+                </div>
+            
+                <br>
+            
+                <h2 class = "centered italic"> Choose your Physician </h2>
+                <div class="modal-body center-div">
+                        <select class = "select">
+                            <option value = "Billy Bobby"> Billy Bobby</option>
+                            <option value = "Samantha Tamanna"> Samantha Tamanna</option>
+                            <option value = "Jonathan Bonovan"> Jonathan Bonovan</option>
+                        </select>
+                </div>
+                <br>
+                <h2 class = "centered italic"> Choose your Service</h2>
+                <div class="modal-body center-div">
+                    <div class = "center-div">
+                        <input class="form-check-input radio-btns" type="radio" id="radio" name = "service">
+                        <label class="form-check-label service" for="flexRadioDefault1">
+                            Physiotherapist Assessment
+                        </label>
+                    </div>
+                        <input class="form-check-input radio-btns" type="radio" id="radio" name = "service">
+                        <label class="form-check-label service" for="flexRadioDefault1">
+                            Physiotherapist Assessment
+                        </label>
+                    <br>
+            
+                        <input class="form-check-input radio-btns" type="radio" id="radio" name = "service">
+                        <label class="form-check-label service" for="flexRadioDefault1">
+                            Atheletic Therapist Assessment
+                        </label>
+            
+                    <br>
+                        <input class="form-check-input radio-btns" type="radio" id="radio" name = "service">
+                        <label class="form-check-label service" for="flexRadioDefault1">
+                            Osteopath Assessment
+                        </label>
+                    <br>
+                        <input class="form-check-input radio-btns" type="radio" id="radio" name = "service">
+                        <label class="form-check-label service" for="flexRadioDefault1">
+                            General Massage
+                        </label>
+                    <br>
+                        <input class="form-check-input radio-btns" type="radio" id="radio" name = "service">
+                        <label class="form-check-label service" for="flexRadioDefault1">
+                            Deep Tissue Massage
+                        </label>
+                </div>
+            
+                <h2 class = "centered italic">Choose a Date</h2>
+            
+                <div class="modal-body center-div">
+                    <label class = "service"> Please select a time between 9:00AM and 5:00PM</label>
+            
+                    <!-- addition of booking in a calandar -->
+                    <div id = "Calendar"> 
+                        <input type="datetime-local" id = "date" name = "date" 
+                        min = "2021-06-13T09:00" max = "2021-12-31T17:00" step="1800" required>
+                    </div>
+                </div>
+                <br>
+            
+                <h2 class = "centered italic">Enter your Contact Information</h2>
+            
+                <div class="modal-body center-div">
+                    <div>
+                        <label class = "service"> First and Last Name</label>
+                    <br>
+                        <input type = "text" class = "select">  
+                    </div>
+                    <br>
+                    <div>
+                        <label class = "service"> Email Address</label>
+                    <br>
+                        <input type = "text" class = "select">  
+                    </div>
+                    <br>
+                    <div>
+                        <label class = "service"> Phone Number</label>
+                    <br>
+                        <input type = "text" class = "select">  
+                    </div>
+            
+            
+                </div>
+
+                <div class="modal-footer center-div">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
 
     <!-- Button trigger modal
     We use the same button code from above, but now we can trigger a modal to appear.
     The bootstrap tutorial includes many different types of modals that you can explore
     https://getbootstrap.com/docs/5.0/components/modal/
     -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    In the body we can add various components. In this example some radio buttons
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Yes
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
-                            No
-                        </label>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Cards are quite useful when building a website. They are a useful way to organize information.
     They can be organized using a CSS grid or other layout options.
     https://getbootstrap.com/docs/5.0/components/card/
     -->
 
-    <h1>Meet the Physicians!</h1>
-    <div class="row justify-content-around">
-        <div class="card" style="width: 18rem;">
-            <img src="images/doctor.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Here is some filler text, in here you can describe your doctor</p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="images/doctor.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Here is some filler text, in here you can describe your doctor</p>
-            </div>
-        </div>
-    </div>
-
     <!--
     We can also use buttons to expand some hidden options
     https://getbootstrap.com/docs/5.0/components/collapse/
     -->
-    <h1>More Information</h1>
-
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        Button To Expand Options
-    </button>
-
-    <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-            Here we have some hidden data to avoid cluttering the page with information
-        </div>
-    </div>
 
     <!-- This example is using what is called an accordian, this is one of three examples
     https://getbootstrap.com/docs/5.0/components/accordion/
     -->
 
-    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <!-- <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -196,7 +287,110 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                 <div class="accordion-body">I can place information in this area</div>
             </div>
         </div>
+    </div> -->
+    <br>
+    <br>
+
+    <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+  >
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Thanks for choosing Pine Tree!!</span>
     </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Company Details
+          </h6>
+          <p>
+            
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Shortcuts
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Social Media
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i> 100 Pine Drive</p>
+          <p><i class="fas fa-home me-3"></i> Augusta, Georgia M1M M1M</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@pinetree.ca
+          </p>
+          <p><i class="fas fa-phone me-3"></i> +1 (416) 000-0000</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright: Tiger Woods Foundation
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
 
 </div>
 <!-- here we input our javascript helper -->
