@@ -3,23 +3,42 @@
 https://getbootstrap.com/docs/5.0/getting-started/introduction/
 This will help you get started with your code!
 -->
+
+
 <html lang="en">
+
+<!--#region head  -->
+
+
 <head>
     <!-- Required meta tags -->
+    <title>Module 5 Lab</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
     <link href="styles/styles.css" rel="stylesheet" type="text/css">
-    <title>Module 4 Lab</title>
-    <script src = "main.js"></script> </script>
+    <script src="scripts/service.js"></script>
 </head>
+
+<!--#endregion -->
+
+
 <body>
-<!--
-I store all of the page information in a container,
-Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
--->
 <div class = "container-lg">
+
+    <!-- #region main page -->
 
     <!--
     Most websites now feature what is called a NavBar.
@@ -31,6 +50,30 @@ Many websites will use what is called CSS grid layouts, where you will have a he
         <h1 id = "title"><img id = "physio-image" src="images/Physio.jpg" width="180" height= "180"> PineTree Physiotherapy and Osteopathy Clinic</h1>
     </nav>
 
+    <nav class = "navbar navbar-expand-md p-3 my-3 border navbar-dark" id = "nav-background">
+        <div class = "collapse navbar-collapse mynav" id = "colapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#first"><img src="images/Home-White.png" alt="logo" style="width:40px;"> Home    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#first"><img src="images/Book-White.png" alt="logo" style="width:40px;"> Appointments   </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#fifth"><img src="images/Massage-White.png" alt="logo" style="width:40px;"> Services    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#third"><img src="images/Physicians-White.png" alt="logo" style="width:40px;"> Physicians    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#second"><img src="images/Covid19-White.png" alt="logo" style="width:40px;"> COVID-19    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#fourth"><img src="images/Info-White.png" alt="logo" style="width:40px;"> Information    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <!-- <h1> Important News!</h1> -->
     <!-- Alerts are an easy way to grab the users attention, this page goes into more detail
     https://getbootstrap.com/docs/5.0/components/alerts/
@@ -41,8 +84,8 @@ Many websites will use what is called CSS grid layouts, where you will have a he
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
-    <div class=" p-3 my-3 border bg-light">
-        <h1 class=""> About Us</h1>
+    <div class= " p-3 my-3 border bg-light">
+        <h1>About Us</h1>
         <pre  class="p-4 my-3 about">We are a family owned professional health clinic located in Augusta, Georgia that 
 specializes in <strong>physiotherapy</strong> and <strong>osteopathy.</strong></pre>
         <pre style="font-size: 25px; padding-left: 1.5rem" class = "about">We are commited to providing the <strong>best health services in Augusta.</strong></pre>
@@ -55,31 +98,37 @@ specializes in <strong>physiotherapy</strong> and <strong>osteopathy.</strong></
     <table class="table table-info table-hover">
         <thead>
             <tr>
-                <th scope="col"><h2>Services We Offer</h2></th>
+                <th scope="col"><h2>Services</h2></th>
                 <th scope="col"><h2>Description</h2></th>
+                <th scope="col"><h2>Price</h2></th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td class = "offer"> Physiotherapist Assessment </td>
                 <td> A 30 minutes health assessement, focused on identifyinig and combating physical limitations </td>
+                <td> $60.00</td>
             </tr>
             <tr>
                 <td class = "offer"> Atheletic Therapist Assessment </td>
                 <td> A 30 minute health assessement for athletes, focused on identifying and combating limitations for performance in sports</td>
+                <td> $80.00</td>
             </tr>
             <tr>
                 <td class = "offer"> Osteopath Assessment </td>
                 <td> A 60 minutes health assessement, focused on identifyinig identifying and combating targetted tissue areas </td>
+                <td> $120.00</td>
             </tr>    
             <tr>
                 <td class = "offer"> General Massage </td>
                 <td> A 60 minute massage for either full body, or specified area based on client's preference </td>
+                <td> $50.00</td>
             </tr>
             <tr> 
                 <td class = "offer"> Deep Tissue Massage </td>
                 <td> Athletes and people who do not regularly stretch can gain tightness in tissue below what our general massage covers.
                     This massage will allow be a 60 minute massage that focuses on specific areas of deep tissue tightness.
+                    <td> $70.00</td>
                 </td>
             </tr>
         </tbody>
@@ -93,21 +142,21 @@ specializes in <strong>physiotherapy</strong> and <strong>osteopathy.</strong></
         <div class="card" style="width: 18rem;">
             <img src="images/Billy.jpg" class = "Physicians" width="250" height= "250"/>         
             <div class="card-body">
-                <h4>Billy Bobby</h4>
+                <h3>Billy Bobby</h3>
                 <p class="card-text">Billy is an experienced Health Professional with 25 years of experience and an MD and Degree in Medical Physics</p>
             </div>
         </div>
         <div class="card" style="width: 18rem;">
             <img src="images/Samantha.jpg" class = "Physicians" width="250" height= "250"/>
             <div class="card-body">
-                <h4>Samantha Tamanna</h4>
+                <h3>Samantha Tamanna</h3>
                 <p class="card-text">Samantha is an experienced Health Professional with 10 years of experience and a PhD in Physical Therapy</p>
             </div>
         </div>
         <div class="card" style="width: 18rem;">
             <img src="images/Jonathan.jpg" class = "Physicians" width="250" height= "250"/>
             <div class="card-body">
-                <h4>Jonathan Bonovan</h4>
+                <h3>Jonathan Bonovan</h3>
                 <p class="card-text">Jonathan is an experienced Health Professional with 8 years of experience and a Masters in Health Scieces</p>
             </div>
         </div>
@@ -116,15 +165,8 @@ specializes in <strong>physiotherapy</strong> and <strong>osteopathy.</strong></
     <br>
     <br>
 
-    <!-- <button class="btn btn-primary center-div" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        Button To Expand Options
-    </button>
+    <!--#endregion -->
 
-    <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-            <h4>Thank you for booking an appointment, we will get back to you shortly!</h4>
-        </div>
-    </div> -->
 
     <button type="button" class="btn btn-primary center-div" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Book an Appointment
@@ -135,23 +177,22 @@ specializes in <strong>physiotherapy</strong> and <strong>osteopathy.</strong></
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
 
-
                 <br>
                 <div class="modal-header center-div">
                     <h1 id = "Book-appt"> Book an Appointment </h1>
                 </div>
-            
                 <br>
             
                 <h2 class = "centered italic"> Choose your Physician </h2>
                 <div class="modal-body center-div">
-                        <select class = "select">
-                            <option value = "Billy Bobby"> Billy Bobby</option>
+                        <select class = "select" id = "physician">
+                            <option value = "Billy Bobby" selected = "true"> Billy Bobby</option>
                             <option value = "Samantha Tamanna"> Samantha Tamanna</option>
                             <option value = "Jonathan Bonovan"> Jonathan Bonovan</option>
                         </select>
                 </div>
                 <br>
+
                 <h2 class = "centered italic"> Choose your Service</h2>
                 <div class="modal-body center-div">
                         <input class="form-check-input radio-btns" type="radio" id="radio" name = "service">
@@ -185,12 +226,16 @@ specializes in <strong>physiotherapy</strong> and <strong>osteopathy.</strong></
                 <h2 class = "centered italic">Choose a Date</h2>
             
                 <div class="modal-body center-div">
-                    <label class = "service"> Please select a time between 9:00AM and 5:00PM</label>
+                    <label class = "service" id = "appt"> Please select a day to meet with your physician</label>
             
                     <!-- addition of booking in a calandar -->
-                    <div id = "Calendar"> 
+                    <!-- <div id = "Calendar"> 
                         <input type="datetime-local" id = "date" name = "date" 
-                        min = "2021-06-13T09:00" max = "2021-12-31T17:00" step="1800" required>
+                        min = "2021-06-28T09:00" max = "2021-12-31T17:00" step="1800" required>
+                    </div> -->
+                    <br>
+                    <div id = "Calendar"> 
+                        <p></p><input type = "text" id="dateInput"></p>
                     </div>
                 </div>
                 <br>
@@ -199,29 +244,57 @@ specializes in <strong>physiotherapy</strong> and <strong>osteopathy.</strong></
             
                 <div class="modal-body center-div">
                     <div>
-                        <label class = "service"> First and Last Name</label>
+                        <label class = "service">First and Last Name</label>
                     <br>
-                        <input type = "text" class = "select">  
+                        <input type = "text" class = "select" id = "name">  
                     </div>
                     <br>
                     <div>
-                        <label class = "service"> Email Address</label>
+                        <label class = "service">Email Address</label>
                     <br>
-                        <input type = "text" class = "select">  
+                        <input type = "text" class = "select" id = "email">  
                     </div>
                     <br>
                     <div>
-                        <label class = "service"> Phone Number</label>
+                        <label class = "service">Phone Number</label>
                     <br>
-                        <input type = "text" class = "select">  
+                        <input placeholder = "(0000000000)" type = "text" id = "phone" class = "select error">  
                     </div>
-            
-            
+
+                </div>
+                <br>
+
+                <h2 class = "centered italic"> Enter your Credit Card Information</h2>
+
+                <div class = "modal-body center-div">
+                    <div>
+                        <label class = "service">Credit Card Number</label>
+                    <br>
+                        <input placeholder = "0000-0000-0000-0000" type = "text" class = "select">  
+                    </div>
+                    <br>
+                    <div>
+                        <label class = "service">Expiry Month</label>
+                    <br>
+                        <input placeholder = "01" type = "text" class = "select">  
+                    </div>
+                    <br>
+                    <div>
+                        <label class = "service">Expiry Year</label>
+                    <br>
+                        <input placeholder = "2021" type = "text" class = "select">  
+                    </div>
+                    <br>
+                    <div>
+                        <label class = "service">CVV</label>
+                    <br>
+                        <input placeholder = "000" type = "text" id = "cvv" class = "select error_cvv">  
+                    </div>
                 </div>
 
                 <div class="modal-footer center-div">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Book</button>
+                    <button type="button" class="btn btn-primary" id = "book">Book</button>
                 </div>
 
 
@@ -229,6 +302,20 @@ specializes in <strong>physiotherapy</strong> and <strong>osteopathy.</strong></
         </div>
     </div>
 
+    <!-- #endregion -->
+
+    <!-- #region extra features -->
+
+
+    <!-- <button class="btn btn-primary center-div" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Button To Expand Options
+    </button>
+
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <h4>Thank you for booking an appointment, we will get back to you shortly!</h4>
+        </div>
+    </div> -->
 
     <!-- Button trigger modal
     We use the same button code from above, but now we can trigger a modal to appear.
@@ -282,112 +369,74 @@ specializes in <strong>physiotherapy</strong> and <strong>osteopathy.</strong></
             </div>
         </div>
     </div> -->
-    <br>
-    <br>
 
-    <!-- Footer -->
+    <!-- #endregion -->
+
+    
+    <br>
+    <br>
+    <!-- #region footer -->
+
 <footer class="text-center text-lg-start bg-light text-muted">
-  <!-- Section: Social media -->
   <section
-    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-  >
-    <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
-      <span>Thanks for choosing PineTree!</span>
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <div class="me-5 d-none d-lg-block" id = "contact">
+      <span>Contact Us!</span>
     </div>
-    <!-- Left -->
-
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <!-- Right -->
   </section>
-  <!-- Section: Social media -->
 
   <!-- Section: Links  -->
   <section class="">
     <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
       <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company Details
-          </h6>
+
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-3">
+          <h5 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Location
+          </h5>
+          <p><i class="fas fa-home me-3"></i> 100 Pine Drive</p>
+          <p><i class="fas fa-home me-3"></i> Augusta, Georgia</p>
+          <p><i class="fas fa-home me-3"></i> M1M 1M1</p>
           <p>
             
           </p>
         </div>
-        <!-- Grid column -->
 
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Shortcuts
-          </h6>
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-3">
+          <h5 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Phone Number
+          </h5>
+          <p><i class="fas fa-phone me-3"></i> +1 (416) 000-0000</p>
         </div>
-        <!-- Grid column -->
 
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Social Media
-
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Contact 
-          </h6>
-          <p><i class="fas fa-home me-3"></i> 100 Pine Drive</p>
-          <p><i class="fas fa-home me-3"></i> Augusta, Georgia M1M M1M</p>
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-3">
+          <h5 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Email
+        </h5>
           <p>
             <i class="fas fa-envelope me-3"></i>
             info@pinetree.ca
           </p>
-          <p><i class="fas fa-phone me-3"></i> +1 (416) 000-0000</p>
         </div>
-        <!-- Grid column -->
+
       </div>
       <!-- Grid row -->
     </div>
   </section>
   <!-- Section: Links  -->
-
   <!-- Copyright -->
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+  <div id = "copyright" class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2021 Copyright: Tiger Woods Foundation
   </div>
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
 
+<!-- #endregion -->
+
 </div>
 <!-- here we input our javascript helper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
 </body>
 </html>
