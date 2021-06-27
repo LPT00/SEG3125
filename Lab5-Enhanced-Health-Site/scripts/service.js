@@ -199,6 +199,8 @@ $(document).ready(function(){
             "Name: " + document.getElementById("name").value + "\n" + 
             "Email: " + document.getElementById("email").value + "\n" + 
             "Phone Number: " + document.getElementById("phone").value + "\n" + 
+            "Physician: " + document.getElementById("physician").value + "\n" +
+            "Service: " + document.getElementById("serve").value + "\n" +
             "Date of appointment: " + document.getElementById("dateInput").value;
 
             alert(confirm);
