@@ -156,6 +156,16 @@ $(document).ready(function(){
     });
 
     $("#book").on("click", function(){
+
+        if (!validateEmail("email")){
+            alert("Please enter the a valid email address. (e.g. 'tiger@woods.ca')");
+            $("#email").val("xxxx@xxxx.xx");
+            $("#email").addClass("error_email");
+        }
+        else {
+            $("#email").removeClass("error_email");
+        }
+
         if (!validatePhone("phone")){
             alert("Please enter the correct format of your phone number. (e.g. '4169990000')");
             $("#phone").val("(xxxxxxxxxx)");
@@ -183,7 +193,7 @@ $(document).ready(function(){
             $("#credit").removeClass("error_credit");
         }
 
-        if (validatePhone("phone") & validateCVV("cvv") & validateCredit("credit")){
+        if (validatePhone("phone") & validateCVV("cvv") & validateCredit("credit") & validateEmail("email")){
             var confirm = "Thank you for booking an appointment! We will get email you confirmation once your credit card information has been processed and is successful \n \n"
             + "Your contact information: \n \n" + 
             "Name: " + document.getElementById("name").value + "\n" + 
