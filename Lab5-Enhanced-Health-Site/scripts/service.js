@@ -11,11 +11,40 @@ function scroll(id){
     go.scrollIntoView();
 }
 
+function validateEmail(email) {
+    var a = document.getElementById(email).value;
+    // This filter asks for something like (12345), so parentheses with any number (at least 1)
+    // of digits
+    //var filter = /^(\([-+]?[0-9]+)\)$/;
+    var filter = /\S+@\S+\.\S+/;
+    if (filter.test(a)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+
 function validatePhone(txtPhone) {
     var a = document.getElementById(txtPhone).value;
     // This filter asks for something like (12345), so parentheses with any number (at least 1)
     // of digits
-    var filter = /^(\([-+]?[0-9]+)\)$/;
+    //var filter = /^(\([-+]?[0-9]+)\)$/;
+    var filter = /^[0-9]{10}$/;
+    if (filter.test(a)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function validateCredit(credit){
+
+    var a = document.getElementById(credit).value;
+
+    var filter = /^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/;
     if (filter.test(a)) {
         return true;
     }
@@ -82,10 +111,21 @@ $(document).ready(function(){
     // and also some feedback as an Alert + putting a value in the input that shows the format required
     // the "addClass" will use the class "error" defined in style.css and add it to the phone input
     // The "error" class in style.css defines yellow background and red foreground
+    $("#email").on("change", function(){
+        if (!validateEmail("email")){
+            alert("Please enter the a valid email address. (e.g. 'tiger@woods.ca')");
+            $("#email").val("xxxx@xxxx.xx");
+            $("#email").addClass("error_email");
+        }
+        else {
+            $("#email").removeClass("error_email");
+        }
+    });
+
     $("#phone").on("change", function(){
         if (!validatePhone("phone")){
-            alert("Please enter the correct format of your phone number. (ie. '(4169990000)')");
-            $("#phone").val("(xxxxxxxxxx)");
+            alert("Please enter the a valid 10 digit Phone Number. (e.g. '4169990000')");
+            $("#phone").val("xxxxxxxxxx");
             $("#phone").addClass("error");
         }
         else {
@@ -94,8 +134,8 @@ $(document).ready(function(){
     });
 
     $("#cvv").on("change", function(){
-        if (!validate_cvv("cvv")){
-            alert("Please enter the correct format of your cvv. (ie. '000')");
+        if (!validateCVV("cvv")){
+            alert("Please enter the correct format for your cvv. (e.g. '000')");
             $("#cvv").val("xxx");
             $("#cvv").addClass("error_cvv");
         }
@@ -103,10 +143,21 @@ $(document).ready(function(){
             $("#cvv").removeClass("error_cvv");
         }
     });
+    
+    $("#credit").on("change", function(){
+        if (!validateCredit("credit")){
+            alert("Please enter the correct format for your credit card. (e.g. '0000-0000-0000-0000')");
+            $("#credit").val("xxxx-xxxx-xxxx-xxxx");
+            $("#credit").addClass("error_credit");
+        }
+        else {
+            $("#credit").removeClass("error_credit");
+        }
+    });
 
     $("#book").on("click", function(){
         if (!validatePhone("phone")){
-            alert("Please enter the correct format of your phone number. (ie. '(4169990000)')");
+            alert("Please enter the correct format of your phone number. (e.g. '4169990000')");
             $("#phone").val("(xxxxxxxxxx)");
             $("#phone").addClass("error");
         }
@@ -115,7 +166,7 @@ $(document).ready(function(){
         }
 
         if (!validateCVV("cvv")){
-            alert("Please enter the correct format of your cvv. (ie. '000')");
+            alert("Please enter the correct format of your cvv. (e.g. '000')");
             $("#cvv").val("xxx");
             $("#cvv").addClass("error_cvv");
         }
@@ -123,7 +174,16 @@ $(document).ready(function(){
             $("#cvv").removeClass("error_cvv");
         }
 
-        if (validatePhone("phone") & validateCVV("cvv")){
+        if (!validateCredit("credit")){
+            alert("Please enter the correct format for your credit card. (e.g. '0000-0000-0000-0000')");
+            $("#credit").val("xxxx-xxxx-xxxx-xxxx");
+            $("#credit").addClass("error_credit");
+        }
+        else {
+            $("#credit").removeClass("error_credit");
+        }
+
+        if (validatePhone("phone") & validateCVV("cvv") & validateCredit("credit")){
             var confirm = "Thank you for booking an appointment! We will get email you confirmation once your credit card information has been processed and is successful \n \n"
             + "Your contact information: \n \n" + 
             "Name: " + document.getElementById("name").value + "\n" + 
