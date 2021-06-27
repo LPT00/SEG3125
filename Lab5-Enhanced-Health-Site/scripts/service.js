@@ -17,7 +17,7 @@ function validateEmail(email) {
     // of digits
     //var filter = /^(\([-+]?[0-9]+)\)$/;
     var filter = /\S+@\S+\.\S+/;
-    if (filter.test(a)) {
+    if (filter.test(a) & a != 'xxxx@xxxx.xxxx') {
         return true;
     }
     else {
@@ -114,7 +114,7 @@ $(document).ready(function(){
     $("#email").on("change", function(){
         if (!validateEmail("email")){
             alert("Please enter the a valid email address. (e.g. 'tiger@woods.ca')");
-            $("#email").val("xxxx@xxxx.xx");
+            $("#email").val("xxxx@xxxx.xxxx");
             $("#email").addClass("error_email");
         }
         else {
@@ -159,7 +159,7 @@ $(document).ready(function(){
 
         if (!validateEmail("email")){
             alert("Please enter the a valid email address. (e.g. 'tiger@woods.ca')");
-            $("#email").val("xxxx@xxxx.xx");
+            $("#email").val("xxxx@xxxx.xxxx");
             $("#email").addClass("error_email");
         }
         else {
