@@ -168,7 +168,7 @@ $(document).ready(function(){
 
         if (!validatePhone("phone")){
             alert("Please enter the correct format of your phone number. (e.g. '4169990000')");
-            $("#phone").val("(xxxxxxxxxx)");
+            $("#phone").val("xxxxxxxxxx");
             $("#phone").addClass("error");
         }
         else {
