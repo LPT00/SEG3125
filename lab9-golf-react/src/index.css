@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+/* base styles */
+body{
+  background-color: #1f5500;
+}
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: rgb(255, 255, 255);
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: rgb(221, 221, 0);
+  font-weight: bold;
+  font-size: 200%;
+  text-shadow: 4px 4px 6px rgb(0, 0, 0)
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #bbbbbb;
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/*Goals */
+
+.blog-details h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+.blog-details div {
+  margin: 20px 0;
+}
+.blog-details button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* create new blog form */
+.goals {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.goals label {
+  text-align: left;
+  display: block;
+}
+.goals h2 {
+  font-size: 25px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+.goals input, .goals textarea, .goals select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+  background-color: rgb(85, 160, 0);
+}
+.goals button {
+  background: rgb(99, 197, 0);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 0px;
+}
+
+.goals #button{
+  float: right;
+}
+
+/*Creating Experts Booking*/
+.experts {
+  max-width: 285px;
+  margin: 0 auto;
+  text-align: center;
+}
+.experts label {
+  text-align: middle;
+  display: block;
+  font-size: 100%;
+}
+.experts h2 {
+  font-size: 25px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.experts input{
+  width: 100%;
+  padding: 6px 10px;
+  color: black;
+}
+.experts button {
+  background: rgb(99, 197, 0);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.experts p{
+  font-size: 80%;
+}
+
+.experts #submit{
+  font-size: 150%;
+  color: rgb(255, 255, 255);
+  border-color: black;
+  border-radius: 8px;
+  background-color: rgb(99, 197, 0);
+  width: 200px;
+}
+
+/* Stats */ 
+.stats #language{
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  color: white;
+  background-color: rgb(117, 174, 52);
+}
+
+.stats {
+  max-width:500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.stats label {
+  text-align:center;
+  display: block;
+}
+.stats h3 {
+  margin-bottom: 10px;
+}
+.stats h2 {
+  font-size: 25px;
+}
+
+.stats textarea, .goals select {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  color: white;
+  box-sizing: border-box;
+  display: block;
+  background-color: rgb(85, 160, 0);
+}
+
+.stats input{
+  font-size: 150%;
+  width: 20%;
+  color: black;
+}
+
+.stats button {
+  background: rgb(99, 197, 0);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#next{
+  float: right;
+  color: black;
+  font-weight: bold;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color:rgb(221, 221, 0) ;
+}
+
+#back{
+  float: left;
+  color: black;
+  font-weight: bold;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color:rgb(163, 163, 163)
+}
+
+/* .stats #Save{
+  font
+} */
+
+/* Progress */
+.progress {
+	background-color: #d8d8d8;
+	border-radius: 20px;
+	position: relative;
+	margin: 15px 0;
+	height: 30px;
+	width: 520px;
+}
+
+.progress-done {
+	background: linear-gradient(to left, #c7c100, #f0e000);
+	box-shadow: 0 3px 3px -5px #f2e970, 0 2px 5px #f2d470;
+	border-radius: 20px;
+	color: rgb(0, 0, 0);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 0;
+	opacity: 0;
+	transition: 1s ease 0.2s;
+}
+
+/*Error*/
+.error #backHome{
+  color: rgb(0, 208, 255);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0)
+}
+
+/* Home */
+.home {
+  max-width:500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.home label {
+  text-align:center;
+  display: block;
+}
+.home h3 {
+  margin-bottom: 10px;
+}
+.home h2 {
+  font-size: 25px;
+}
+
+.home textarea, .goals select {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  color: white;
+  box-sizing: border-box;
+  display: block;
+  background-color: rgb(85, 160, 0);
+}
+
+.home input{
+  font-size: 150%;
+  width: 20%;
+  color: black;
+}
+
+.home button {
+  background: rgb(99, 197, 0);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Tips */
+.tips {
+  max-width:500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.tips label {
+  text-align:center;
+  display: block;
+}
+.tips h3 {
+  margin-bottom: 10px;
+}
+.tips h2 {
+  font-size: 25px;
+}
+
+.tips textarea, .goals select {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  color: white;
+  box-sizing: border-box;
+  display: block;
+  background-color: rgb(85, 160, 0);
+}
+
+.tips input{
+  font-size: 150%;
+  width: 20%;
+  color: black;
+}
+
+.tips button {
+  background: rgb(99, 197, 0);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.home #About{
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  color: white;
+  background-color: rgb(117, 174, 52);
+  text-align: left;
+}
+
+.home #Contact{
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  background-color: rgb(145, 145, 145);
+}
+.home #start{
+  font-size: 150%;
+  color: rgb(255, 255, 255);
+  border-color: black;
+  border-radius: 8px;
+  background-color: rgb(99, 197, 0);
+  width: 200px;
+}
+
+.home #ToDo{
+  padding: 6px 10px;
+  border: 2px solid rgb(138, 138, 138);
+  color: white;
+  background-color: rgb(38, 72, 0);
+  text-align: left;
+}
+
+.video{
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0
+}
+
+.video iframe{
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.tips #tip{
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  color: white;
+  background-color: rgb(117, 174, 52);
+  text-align: left;
+}
+
+.tips #content{
+  padding: 6px 10px;
+  border: 2px solid rgb(138, 138, 138);
+  color: white;
+  background-color: rgb(38, 72, 0);
+  text-align: left;
+}
