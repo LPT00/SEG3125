@@ -101,7 +101,8 @@ const Experts = () => {
             <br />
 
             <h2>Book a Video Chat!</h2>
-            <Form>
+            <Form onSubmit = {(e) => {window.confirm('Thank you for booking a call with: ' + document.getElementById("expert").value + ' on ' + document.getElementById("booking").value 
+    + '\n \n' + 'We will get back to you shortly at: ' + document.getElementById("email").value)}}>
                 {/* <Form.Select>
                     <option>Choose an Expert</option>
                     <option value = "Tiger">Tiger</option>
@@ -113,6 +114,7 @@ const Experts = () => {
                 <p>Tiger</p>
                 <input
                 id = "expert"
+                value = "Tiger Woods"
                 type = "radio"
                 name = "expert"
                 onChange = {(e) => {newd1('July 24, 2021 5:00pm'); newd2('July 25, 2021 6:00pm')}}
@@ -120,6 +122,7 @@ const Experts = () => {
                 <p> Phil </p>
                 <input
                 id = "expert"
+                value = "Phil Mickelson"
                 type = "radio"
                 name = "expert"
                 onChange = {(e) => {newd1('July 26, 2021 2:00pm'); newd2('July 27, 2021 3:00pm')}}
@@ -127,6 +130,7 @@ const Experts = () => {
                 <p> Rory </p>
                 <input
                 id = "expert"
+                value = "Rory Mcilroy"
                 type = "radio"
                 name = "expert"
                 onChange = {(e) => {newd1('July 28, 2021 11:00am'); newd2('July 29, 2021 12:00pm')}}
@@ -137,7 +141,7 @@ const Experts = () => {
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label><i>Email address:</i></Form.Label>
                 <br />
-                <Form.Control type="email" placeholder="Enter email..." />
+                <Form.Control id = "email" type="email" placeholder="Enter email..." />
                 <Form.Text className="text-muted">
                     Format: ( xxxx@xxxx.xxxx )
                 </Form.Text>
@@ -149,6 +153,7 @@ const Experts = () => {
                 <p> {date1} </p>
                 <input
                 id = "booking"
+                value = {date1}
                 type = "radio"
                 name = "date"
                 selected = {true}
@@ -156,6 +161,7 @@ const Experts = () => {
                 <p> {date2} </p>
                 <input
                 id = "booking"
+                value = {date2}
                 type = "radio"
                 name = "date"
                 selected = {true}

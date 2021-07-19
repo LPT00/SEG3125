@@ -2,7 +2,6 @@
 
 const Confirm = ({expert}, {}) => {
 
-    
 
     return ( 
         <div className="confirm">

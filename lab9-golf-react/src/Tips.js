@@ -1,7 +1,8 @@
 import { useHistory } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Video from "./Video";
-import Putting from './images/putstroke.png'
+import Putting from './images/putstroke.png';
+import Iron from './images/Irons.jpg';
 
 const Tips = () => {
 
@@ -21,16 +22,39 @@ const Tips = () => {
             <h2>Your Tips</h2>
             <br />
             <div id = "tip">
+
+            <h3><u>Tip for:</u></h3> 
+            <h3>{"• >"} 5 Lost balls</h3>
+            <h3>{"• >"} 20 Shots hit left/right</h3>
+
             <div id = "content">
-                <h3>Hit it STRAIGHTER and LOSE LESS BALLS</h3>
+                <h4>Hit it STRAIGHTER and LOSE LESS BALLS</h4>
                 <br />
                 <div id = "ToDo">
                 <Video embedId="qiCE1lm2PGU" />
                 </div>
-                </div>
-            <br /> 
+                <br />
+            </div>
+            <br />
+
+            <h3><u>Tip for:</u></h3> 
+            <h3>{"• >"} 80 Total Score</h3>
+
             <div id = "content">
-                    <h3>How to have a PERFECT PUTTING STROKE</h3>
+                    <h4>SHOTS shots that will LOWER YOUR SCORE</h4>
+                    <br />
+                    <div id = "ToDo">
+                    <Video embedId="EmgzbEtpZq0" />
+                    </div>
+            <br /> 
+           </div>
+            <br /> 
+
+            <h3><u>Tip for:</u></h3> 
+            <h3>{"• >"} 36 Puts</h3>
+
+            <div id = "content">
+                    <h4>How to have a PERFECT PUTTING STROKE</h4>
                     <br />
                     <div id = "ToDo">
                     <img src={Putting} alt="logo" style={{width:475}}/>
@@ -38,14 +62,19 @@ const Tips = () => {
             <br /> 
             </div>
             <br />
+
+            <h3><u>Tip for:</u></h3> 
+            <h3>{"• >"} 10 Shots hit left/right with irons</h3>
+            <h3>{"• "}Struggling with hitting irons solid</h3>
+
             <div id = "content">
-                    <h3>SHOTS shots that will LOWER YOUR SCORE</h3>
+                    <h4>A simple drill to HIT your IRONS BETTER</h4>
                     <br />
                     <div id = "ToDo">
-                    <Video embedId="EmgzbEtpZq0" />
+                    <img src={Iron} alt="logo" style={{width:475}}/>
                     </div>
             <br /> 
-           </div>
+            </div>
       </div>
             <br />
             <br />
